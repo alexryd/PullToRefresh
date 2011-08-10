@@ -86,9 +86,9 @@
     refreshLabel.textAlignment = UITextAlignmentCenter;
 
     refreshArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.refreshArrowImageName]];
-    refreshArrow.frame = CGRectMake(floorf((REFRESH_HEADER_HEIGHT - 27) / 2),
-                                    (floorf(REFRESH_HEADER_HEIGHT - 44) / 2),
-                                    27, 44);
+    refreshArrow.frame = CGRectMake(floorf((REFRESH_HEADER_HEIGHT - refreshArrow.image.size.width) / 2),
+                                    (floorf(REFRESH_HEADER_HEIGHT - refreshArrow.image.size.height) / 2),
+                                    refreshArrow.image.size.width, refreshArrow.image.size.height);
 
     refreshSpinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     refreshSpinner.frame = CGRectMake(floorf(floorf(REFRESH_HEADER_HEIGHT - 20) / 2), floorf((REFRESH_HEADER_HEIGHT - 20) / 2), 20, 20);

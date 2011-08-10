@@ -66,6 +66,10 @@
   [self addPullToRefreshHeader];
 }
 
+- (NSString *)refreshArrowImageName {
+    return @"arrow.png";
+}
+
 - (void)setupStrings{
   textPull = [[NSString alloc] initWithString:@"Pull down to refresh..."];
   textRelease = [[NSString alloc] initWithString:@"Release to refresh..."];
@@ -81,7 +85,7 @@
     refreshLabel.font = [UIFont boldSystemFontOfSize:12.0];
     refreshLabel.textAlignment = UITextAlignmentCenter;
 
-    refreshArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"]];
+    refreshArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.refreshArrowImageName]];
     refreshArrow.frame = CGRectMake(floorf((REFRESH_HEADER_HEIGHT - 27) / 2),
                                     (floorf(REFRESH_HEADER_HEIGHT - 44) / 2),
                                     27, 44);
